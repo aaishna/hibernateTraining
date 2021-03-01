@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 25, 2016 10:16:00 AM by Hibernate Tools 3.5.0.Final -->
+
+
+<hibernate-mapping>
+	<class name="com.way2learnoline.Employee" table="T_EMPLOYEE">
+		<id name="id" column="EMP_ID"/>		
+		<property name="name"/>
+		<property name="salary"/>
+		<many-to-one name="address" class="com.way2learnoline.Address" column="AID"
+		cascade="all"/>
+	</class>
+	
+	<class name="com.way2learnoline.Address" table="T_ADDRESS">
+		<id name="addressId"/>
+		<property name="city"/>
+		<property name="country"/>
+	
+	</class>
+	
+</hibernate-mapping>
